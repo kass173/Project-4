@@ -19,3 +19,7 @@ machine learning. And we will also be using Scikit-learn as the main library to 
 
 Also decided what of the following programming language we wanted to use such as panda’s, python matplotlib as well as Tableau to create a dashboard to 
 showcase our data in a nice final visualisation.
+
+##  Visualisations
+
+## Final
