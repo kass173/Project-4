@@ -1,8 +1,8 @@
 # Project-4
 
-![stars](Images/milkyway.jpeg)
-
 ## Team: Cheila, Grace, Helen, Jacob, Kassem & Rami
+
+![stars](Images/milkyway.jpeg)
 
 ## Project Title: STARS ANALYSIS
 
