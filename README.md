@@ -4,6 +4,8 @@
 
 ## Project Title:
 
+![Raj_Kooothrapalli](Images/Raj.png)
+
 For our 4th project we’ve decided to look at and analyse data relating to star’s. 
 
 Firstly after deciding the members of our group and getting together we looked at  various data sets across various topic categories mainly used Kaggle & google searches to find our dataset.
