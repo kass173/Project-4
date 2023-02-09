@@ -2,7 +2,7 @@
 
 ## Team: Cheila, Grace, Helen, Jacob, Kassem & Rami
 
-## Project Title:
+## Project Title: STARS ANALYSIS
 
 For our 4th project we’ve decided to look at and analyse data relating to star’s. 
 
