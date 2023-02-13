@@ -34,6 +34,23 @@ showcase our data in a nice final visualisation.
 
 ## Pre Processing
 
+## Data Model Implementation
+
+We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
+
+The cleaned, normalized, and standardized data was achieved as part of our pre-processing work at the begining of the project and prior to modeling. 
+This is evidenced under the `resources` files starting with `Star9999_raw` then further formating within the `Clean_stars.csv` and lastly leading to our 
+final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
+
+The model utilizes data retrieved from SQL or Spark (5 points)
+
+The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)
+
+## Data Model Optimization
+
+The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
+
+Overall model performance is printed or displayed at the end of the script (10 points)
 
 ##  Visualisations & Programming Languages
 
