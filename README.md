@@ -27,6 +27,10 @@ showcase our data in a nice final visualisation.
 [Stars Data - Clean](Resources/clean_stars.csv)  
 [Stars Data - Final](Resources/final_stars.csv)
 
+## Spectral Star Type
+
+![Spectral Definitions](Images/Spectral_Star_types)
+
 
 ## Pre Processing
 
