@@ -36,9 +36,11 @@ showcase our data in a nice final visualisation.
 
 ## Data Model Implementation
 
-We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`)
+We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
 
-The data is cleaned, normalized, and standardized prior to modeling (5 points)
+The cleaned, normalized, and standardized data was achieved as part of our pre-processing work at the begining of the project and prior to modeling. 
+This is evidenced under the `resources` files starting with `Star9999_raw` then further formating within the `Clean_stars.csv` and lastly leading to our 
+final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
 
 The model utilizes data retrieved from SQL or Spark (5 points)
 
