@@ -22,6 +22,7 @@ showcase our data in a nice final visualisation.
 
 ## Dataset
 
+[Kaggle Dataset - Star Dataset for Stellar Classification](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs)
 [Stars Data - Raw](Resources/Star9999_raw.csv)   
 [Stars Data - Clean](Resources/clean_stars.csv)
 
