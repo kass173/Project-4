@@ -29,7 +29,7 @@ showcase our data in a nice final visualisation.
 
 ## Spectral Star Type
 
-![Spectral Definitions](Images/Spectral_Star_types)
+![Spectral Definitions](Images/Spectral_Star_types.jpeg)
 
 
 ## Pre Processing
