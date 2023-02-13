@@ -22,7 +22,7 @@ showcase our data in a nice final visualisation.
 
 ## Dataset
 
-[Stars Data - Raw](Resources/Star9999_raw.csv)
+[Stars Data - Raw](Resources/Star9999_raw.csv)   
 [Stars Data - Clean](Resources/clean_stars.csv)
 
 ##  Visualisations
