@@ -34,6 +34,14 @@ showcase our data in a nice final visualisation.
 
 ## Pre Processing
 
+## Extract
+
+Firstly, this process extracst the data from the CSV files using Pandas DataFrame. In the extraction phase, the unwanted columns were removed.
+
+## Transformation
+
+In the Transformation Phase, some columns were added to the DataFrame:
+
 ## Data Model Implementation
 
 We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
