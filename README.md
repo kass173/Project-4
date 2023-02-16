@@ -44,17 +44,17 @@ Firstly, this process extracts the data from the CSV files using Pandas DataFram
 
 In the Transformation Phase, columns were added to the DataFrame creating additional columb:
 
- * `a magx`: absolute magnitude to help us seperate sellar classes by grouping based on this variable .
+ * `A Mag`: absolute magnitude to help us seperate sellar classes by grouping based on this variable .
  * `class target`: xxxxx.  
  * `star name and star classification`: we replaced star name columb by grouping the star based on its star definition into the star classification.  
 
 ## Load
 
-The last phase of the ETL process to save the data in a proper database, so it can be easily loaded by another application to proceed with further analysis on the data.
+The last phase of the ETL process to save the data in a proper database, so it can be easily loaded by another application to proceed with further analysis on the data. We did this in the Jypeter Notebook `Connect_to_Database.ipynb`.
 
-This process has prepared CSV files wih clean data, which are available in the `/Resources/Clean_Data/` folder of this repository.
+This process has prepared CSV files with clean data, which are available in the `/Resources` folder of this repository.
 
-Finally, and very important, a **SQLite database** was created (`/Resources/xxxxx`), and the consolidated data loaded into the table `xxxxx`.
+Finally, and very importantly, a **SQLite database** was created (`/Resources/Connect_to_Database.ipynb`), and the consolidated data loaded into the table. `TG_stars_database.csv` & `TG_stars.csv`.
 
 ## Pre Processing
 
@@ -66,9 +66,9 @@ The cleaned, normalized, and standardized data was achieved as part of our pre-p
 This is evidenced under the `resources` files starting with `Star9999_raw` then further formating within the `Clean_stars.csv` and lastly leading to our 
 final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
 
-The model utilizes data retrieved from SQL or Spark (5 points)
+The Model utilizes data retrieved from SQL which is visable iwithin out Jypeter Notebook script.
 
-The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)
+The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 99.7% classification accuracy.
 
 ## Data Model Optimization
 
@@ -76,6 +76,11 @@ The model optimization and evaluation process showing iterative changes made to 
 
 Overall model performance is printed or displayed at the end of the script (10 points)
 
-##  Visualisations & Programming Languages
+##  Tableau Master, Visualisations
+
+we used matplot lib and seabornes for visualisations for the desity which didnt exist in matplotlib so we used seaboarne for that.
+
 
 ## Final
+
+
