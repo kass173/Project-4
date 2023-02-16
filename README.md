@@ -31,16 +31,32 @@ showcase our data in a nice final visualisation.
 
 ![Spectral Definitions](Images/Spectral_Star_types.jpeg)
 
+## ETL - Extract, Transform and Load Process
 
-## Pre Processing
-
+Considering the complexity of different databases, and in order to bring only the relevant data to be analysed, this project implements an **ETL 
+process**, which was implemented using Jypyter notepad and **Pandas DataFrame**. 
+ 
 ## Extract
 
-Firstly, this process extracst the data from the CSV files using Pandas DataFrame. In the extraction phase, the unwanted columns were removed.
+Firstly, this process extracts the data from the CSV files using Pandas DataFrame. In the extraction phase, the unwanted columns were removed.
 
 ## Transformation
 
-In the Transformation Phase, some columns were added to the DataFrame:
+In the Transformation Phase, columns were added to the DataFrame creating additional columb:
+
+ * `a magx`: absolute magnitude to help us seperate sellar classes by grouping based on this variable .
+ * `class target`: xxxxx.  
+ * `star name and star classification`: we replaced star name columb by grouping the star based on its star definition into the star classification.  
+
+## Load
+
+The last phase of the ETL process to save the data in a proper database, so it can be easily loaded by another application to proceed with further analysis on the data.
+
+This process has prepared CSV files wih clean data, which are available in the `/Resources/Clean_Data/` folder of this repository.
+
+Finally, and very important, a **SQLite database** was created (`/Resources/xxxxx`), and the consolidated data loaded into the table `xxxxx`.
+
+## Pre Processing
 
 ## Data Model Implementation
 
