@@ -68,7 +68,7 @@ final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
 
 The Model utilizes data retrieved from SQL which is visable iwithin out Jypeter Notebook script.
 
-The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 99.7% classification accuracy. It becasue of the 
+The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 75.10% classification accuracy. It becasue of the 
 for loop in the pre processing that cleaned the target class to give us a higher classification accuracy.
 
 ## Data Model Optimization
