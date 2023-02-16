@@ -83,13 +83,13 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 ![B-V vs Amag](Images/BVvsAmag.jpeg)
 
-![B-V vs Vmag](Images/B-V%vs%Vmag.jpeg)
+![B-V vs Vmag](Images/BVvsVmag.jpeg)
 
 ![HR Diagram](Images/HRDiagram.jpeg)
 
-![Plx vs Amag](Images/Plx%VS%Amag.PNG)
+![Plx vs Amag](Images/PlxVSAmag.PNG)
 
-![Plx vs Vmag](Images/Plx%VS%Vmag.PNG)
+![Plx vs Vmag](Images/PlxVSVmag.PNG)
 
 
 
