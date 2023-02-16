@@ -85,7 +85,7 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 ![B-V vs Vmag](B-V%vs%Vmag.PNG)
 
-![HR Diagram](HRDiagram.png)
+![HR Diagram](HRDiagram.jpeg)
 
 
 
