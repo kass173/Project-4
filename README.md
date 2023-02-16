@@ -44,9 +44,9 @@ Firstly, this process extracts the data from the CSV files using Pandas DataFram
 
 In the Transformation Phase, columns were added to the DataFrame creating additional columb:
 
- * `A Mag`: this was needed to classify the stars but to get this figure we needed to calculate it by running the calculation from the dataset ••Vmag x Plx•• absolute magnitude to help us seperate sellar classes by grouping based on this variable.  
- * `class target`: xxxxx.  
- * `star name and star classification`: we replaced star name columb by grouping the star based on its star definition into the star classification.  
+ * `A Mag`: this was needed to classify the stars but to get this figure we needed to calculate it by running the calculation from the dataset **Vmag x Plx** absolute magnitude to help us seperate sellar classes by grouping based on this variable.  
+ * `class target`: This was a conversion from Spectral Type, so a for loop to categorise the stars based on some defined critiria which we have shown in the spectral star type visual.  
+ * `star classification`: we created this column for our tableau visuals.  
 
 ## Load
 
