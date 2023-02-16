@@ -54,7 +54,7 @@ The last phase of the ETL process to save the data in a proper database, so it c
 
 This process has prepared CSV files with clean data, which are available in the `/Resources` folder of this repository.
 
-Finally, and very importantly, a **SQLite database** was created (`/Resources/Connect_to_Database.ipynb`), and the consolidated data loaded into the table. `TG_stars_database.csv` & `TG_stars.csv`.
+Finally, and very importantly, a **Postgres Database** was created (`/Resources/Connect_to_Database.ipynb`), and the consolidated data loaded into the table. `TG_stars_database.csv` & `TG_stars.csv`.
 
 ## Pre Processing
 
