@@ -81,7 +81,7 @@ Overall model performance is printed or displayed at the end of the script (10 p
 
 we used matplot lib and seabornes for visualisations for the desity which didnt exist in matplotlib so we used seaboarne for that.
 
-![B-V vs Amag](Images/B-V%vs%Amag.jpeg)
+![B-V vs Amag](Images/B-V vs Amag.jpeg)
 
 ![B-V vs Vmag](Images/B-V%vs%Vmag.jpeg)
 
