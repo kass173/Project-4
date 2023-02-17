@@ -20,6 +20,10 @@ machine learning. And we will also be using Scikit-learn as the main library to 
 Also decided what of the following programming language we wanted to use such as panda’s, python matplotlib as well as Tableau to create a dashboard to 
 showcase our data in a nice final visualisation.
 
+## Aim
+
+The aim of this study is to utilise the Morgan-Keenan (MK) classification system, which incorporates the HR classification system, to categorise stars by their chromaticity and size using spectral data. The study will focus on categorising stars into the main Spectral Types using the Absolute Magnitude and B-V Color Index within a specific dataset.
+
 ## Dataset
 
 [Kaggle Dataset - Star Dataset for Stellar Classification](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs)  
