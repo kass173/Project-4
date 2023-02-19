@@ -95,6 +95,8 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 ![Plx vs Vmag](Images/PlxVSVmag.PNG)
 
+![Density for Amag & Vmag](Images/density%for%Amag%and%Vmag.PNG)
+
 
 
 ## Final
