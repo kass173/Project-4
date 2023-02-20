@@ -73,8 +73,6 @@ be testing the same in the test set model in the final optimised model.
 So by splitting the datasets and looping through the numbers on the labels we would be training on one set of data and then test on the next set of data 
 after making our predictions.
 
-All this work is saved within our repo in the two-target folder. 
-
 ## Data Model Implementation
 
 We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
@@ -94,6 +92,8 @@ Then we ran the model optimization and evaluation process by making iterative ch
 documented at slightly higher to 75.6% this is within the Python script itself.
 
 Overall model performance is printed or displayed at the end of the script as mentioned is at 75.6% post the model optimisation process.
+
+Within the two-target folder is our final optimised model and analysis which contains an accuracy of 89.2%. 
 
 ##  Tableau & Visualisations
 
