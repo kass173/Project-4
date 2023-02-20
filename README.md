@@ -35,6 +35,8 @@ The aim of this study is to utilise the Morgan-Keenan (MK) classification system
 
 ![Spectral Definitions](Images/Spectral_Star_types.jpeg)
 
+## Spectral Class
+
 ![HRD](Images/HRDiagram.png)
 
 ## ETL - Extract, Transform and Load Process
