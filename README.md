@@ -60,6 +60,19 @@ This process has prepared CSV files with clean data, which are available in the 
 
 Finally, and very importantly, a **Postgres Database** was created (`/Resources/Connect_to_Database.ipynb`), and the consolidated data loaded into the table. `TG_stars_database.csv` & `TG_stars.csv`.
 
+## Preprocessing
+
+During the preprocessing part of the project we took 2 our of our total 10 data sections and used this for the testing and training of the model ran 
+this within python.
+
+When we are training and testing the model we had to separate the data into two models and data sets.
+
+So that we were not cheating the models as if we tested the whole model and dataset we’ve would seen what we want from the training model and we would 
+be testing the same in the test set model in the final optimised model.
+
+So by splitting the datasets and looping through the numbers on the labels we would be training on one set of data and then test on the next set of data 
+after making our predictions.
+
 ## Data Model Implementation
 
 We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
@@ -75,9 +88,10 @@ for loop in the pre processing that cleaned the target class to give us a higher
 
 ## Data Model Optimization
 
-The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
+Then we ran the model optimization and evaluation process by making iterative changes to the model and the resulting changes in model performance is 
+documented at slightly higher to 75.6% this is within the Python script itself.
 
-Overall model performance is printed or displayed at the end of the script (10 points)
+Overall model performance is printed or displayed at the end of the script as mentioned is at 75.6% post the model optimisation process.
 
 ##  Tableau & Visualisations
 
