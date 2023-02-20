@@ -97,7 +97,7 @@ Within the two-target folder is our final optimised model and analysis which con
 
 ##  Tableau & Visualisations
 
-we used matplot lib and seabornes for visualisations for the desity which didnt exist in matplotlib so we used seaboarne for that.
+For our visualisations we used **Matplotlib and Seabornes** this is because our data was to present density related data of the stellar bodies.
 
 ![B-V vs Amag](Images/BVvsAmag.jpeg)
 
