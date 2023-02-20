@@ -113,6 +113,8 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 ### Tableau Visuals
 
+[Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
+
 ![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
  
 ![Density for Amag & Vmag](Images/Tableau/BV_plx.png)
