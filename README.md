@@ -73,6 +73,8 @@ be testing the same in the test set model in the final optimised model.
 So by splitting the datasets and looping through the numbers on the labels we would be training on one set of data and then test on the next set of data 
 after making our predictions.
 
+All this work is saved within our repo in the two-target folder. 
+
 ## Data Model Implementation
 
 We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
@@ -108,6 +110,12 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 ![Plx vs Vmag](Images/PlxVSVmag.PNG)
 
 ![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
+
+### Tableau Visuals
+
+![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
+
+
 
 
 ## Final
