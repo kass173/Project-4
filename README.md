@@ -117,6 +117,8 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 [Stars Tableau Dashboard 2](https://public.tableau.com/app/profile/grace.cheuk/viz/StellarClassification_16764912311040/Dashboard1?publish=yes) 
 
+![Density for Amag & Vmag](Images/Tableau/TG_stars_Dashboard.png)
+
 ![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
  
 ![Density for Amag & Vmag](Images/Tableau/BV_plx.png)
@@ -125,17 +127,6 @@ we used matplot lib and seabornes for visualisations for the desity which didnt 
 
 ![Density for Amag & Vmag](Images/Tableau/mag_plx2.png)
 
-![Density for Amag & Vmag](Images/Tableau/TG_stars_Dashboard.png)
-
 ![Density for Amag & Vmag](Images/Tableau/vmag.png)
-
-
-
-
-
-
- 
-
-## Final
 
 
