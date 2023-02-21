@@ -10,7 +10,7 @@ For our 4th project we’ve decided to create a Machine Learning Model that can 
 
 Firstly, after deciding the members of our group and getting together we looked at  various data sets across various topic categories mainly used Kaggle & google searches to find our dataset.
 
-We came to a general group consensus on our final dataset related to “star dataset for stellar classification” (star-categorization-giants-and-dwarfs). 
+We came to a general group consensus on our final dataset related to “star dataset for stellar classification”. 
 
 So this will be the problem/topic we wanted to analyse and visualise.
 
