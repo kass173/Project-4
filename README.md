@@ -34,7 +34,7 @@ Finally, we created a `Postgres` database [Connect_to_Database.ipynb](/Resources
 
 <!-- rename this header  -->
 
-## Next Steps
+## Next Steps
 
 We decided to use supervised machine learning due to the classification requirements our models would need to meet. Two models were built based on different information within the original dataset: a Random Forest Classifier and a Support Vector Machine.
 The libraries we used include:
