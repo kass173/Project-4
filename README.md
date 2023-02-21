@@ -27,9 +27,6 @@ During the transformation phase, we added columns to the DataFrame, creating add
 * `Target class`: This column was a conversion from Spectral Type. We used a for loop to categorise the stars based on some defined criteria, which we have shown in the spectral star type visual.
 * `Star classification`: We created this column to aid in our Tableau visualisations.
 
-#### Spectral Class
-![HRD](Images/HRDiagram.png)
-
 <!-- double check these links to files used and created in this paragraph -->
 The final phase of the ETL process involved saving the data in a proper database so that it could be easily loaded by another application for further analysis. We completed this step using the Jupyter Notebook [Connect_to_Database.ipynb](Resources/Spectral_Type_Classification/Connect_to_Database.ipynb).
 The ETL process resulted in the creation of CSV files with clean data, which are available in the[Resources](/Resources) folder of this repository.
@@ -58,6 +55,10 @@ The libraries we used include:
 
 #### Spectral Star Type
 ![Spectral Definitions](Images/Spectral_Star_types.jpeg)
+
+#### Spectral Class
+<!-- Cheila's used this for dwarf/giants -->
+![HRD](Images/HRDiagram.png)
 
 For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
 
