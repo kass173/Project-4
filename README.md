@@ -148,8 +148,8 @@ Presenting density related data of the stellar bodies.
 
 Team - Group 2 (5)
 
-Cheila Bergamini (cheibergam)
-Grace Cheuk (gw-sc)
-Helen Vlachou (EleniQ)
-Kassem Saleem (kass173)
-Rahmi Rahmiev ()
+* Cheila Bergamini (cheibergam)
+* Grace Cheuk (gw-sc)
+* Helen Vlachou (EleniQ)
+* Kassem Saleem (kass173)
+* Rahmi Rahmiev ()
