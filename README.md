@@ -61,6 +61,8 @@ The libraries we used include:
 <!-- PREPROCESSING NOT PROOFED -->
 ## Pre-Processing
 
+For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
+
 During the preprocessing part of the project we essentially cleaned our data by correcting the datatypes from 'object' to 'float'. After this we were able to remove any rows with Null values, this created a loss of 3.2% of the data, which is an acceptable loss.
 
 After this was completed we needed to calculate Absolute Magnitude using the below equation. 
@@ -72,16 +74,13 @@ Finally, we dropped the 'SpType' Column to allow for a completely numerical and 
 
 This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed dataset from which we worked.
 
-
-For Tableau visualisations, we used two slightly different datasets to allow for different visualisations:
+### Tableau Visualisations
+We used two slightly different datasets to allow for different visualisations:
 
 1. one with a target column name designed to tell more of a story [TG_stars](Resources/TG_stars_database.csv) 
 2. one without, and the other was more for numerical analysis [final_stars](Resources/final_stars.csv)
 
-For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
-
-### Tableau Visuals
-Presenting numerical analyses of data
+Presenting numerical analyses of data, detailed images are stored in the [Tableau](/Resources/Tableau) folder.
 
 [Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
 ![Final_stars_Dashboard](Images/Tableau/StellarDashboard.png)
@@ -122,18 +121,19 @@ for loop in the pre processing that cleaned the target class to give us a higher
 <!-- DMO NOT PROOFED -->
 ## Data Model Optimization
 
-### **RFC Data Journey
+### **RFC Data Journey**
 
 Random Forest Classifier was used due to its strong ability towards dealing with multiple classifications, but also used MLP and SVM and LR during tests.
-The target columns were created within the Preprocessing section of the work, the ‘TargetClass’ breakdown is as follows. 
-•	“O” = Target Class 0
-•	“B” = Target Class 1
-•	“A” = Target Class 2
-•	“F” = Target Class 3
-•	“G” = Target Class 4
-•	“K” = Target Class 5 
-•	“M” = Target Class 6 
-•	Other = Target Class 7 (very small subgroups of stars that are uncommonly found) 
+The target columns were created within the Preprocessing section of the work, the ‘TargetClass’ breakdown is as follows:
+
+*	“O” = Target Class 0
+*	“B” = Target Class 1
+*	“A” = Target Class 2
+*	“F” = Target Class 3
+*	“G” = Target Class 4
+*	“K” = Target Class 5 
+*	“M” = Target Class 6 
+*	Other = Target Class 7 (very small subgroups of stars that are uncommonly found) 
 
 I used some feature engineering on this dataframe to increase the datapoints the models could pull information from. 
 
