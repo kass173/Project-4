@@ -42,6 +42,7 @@ The ETL process resulted in the creation of CSV files with clean data, which are
 Finally, we created a `Postgres` database [Connect_to_Database.ipynb](/Resources/Connect_to_Database.ipynb) and loaded the consolidated data into the table, including [TG_stars_database.csv](Resources/TG_stars_database.csv) and [TG_stars.csv](Resources/TG_stars.csv) creating the [schema](Diagrams/tgstars_SQL_script.sql).
 
 <!-- rename this header  -->
+
 ## Next Steps
 
 We decided to use supervised machine learning due to the classification requirements our models would need to meet. Two models were built based on different information within the original dataset: a Random Forest Classifier and a Support Vector Machine.
