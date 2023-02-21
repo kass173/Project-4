@@ -56,10 +56,6 @@ The libraries we used include:
 #### Spectral Star Type
 ![Spectral Definitions](Images/Spectral_Star_types.jpeg)
 
-#### Spectral Class
-<!-- Cheila's used this for dwarf/giants -->
-![HRD](Images/HRDiagram.png)
-
 For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
 
 During the preprocessing part of the project we essentially cleaned our data by correcting the datatypes from 'object' to 'float'. After this we were able to remove any rows with Null values, this created a loss of 3.2% of the data, which is an acceptable loss.
@@ -67,11 +63,20 @@ During the preprocessing part of the project we essentially cleaned our data by 
 After this was completed we needed to calculate Absolute Magnitude using the below equation. 
 ![AMAG](Images/equation.PNG)
 
-We were then able to create our 'TargetClass' Column, which utlised a for loop to separate the Spectral Types from 'O' to 'M' into their respective classes.
+The two different models have been preprocessed differently, this is because from the original column ‘SpType’, we had two sources of information. For example, an SpType of ‘AV’ would tell me that the star is a Blue Dwarf. The A refers to its B-V, whereas the Roman Numeral refers to it’s Absolute Magnitute (AMAG), hence why we calculated Amag within the preprocessing. The two different ways we have preprocessed for our two different classification models is explained below. 
+
+#### Spectral Type Preprocessing (B-V)
+We were able to create our 'TargetClass' Column by utlising a for loop to separate the Spectral Types from 'O' to 'M' into their respective classes, anything that did not fall into these categories was placed into a separate group as they are stars that do not fall in the main spectral classification system. 
 
 Finally, we dropped the 'SpType' Column to allow for a completely numerical and scalable dataframe. 
 
 This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed dataset from which we worked.
+
+
+#### Spectral Type Preprocessing (AMAG)
+<!-- Cheila's used this for dwarf/giants -->
+![HRD](Images/HRDiagram.png)
+
 
 ### Tableau Visualisations
 We used two slightly different datasets to allow for different visualisations:
@@ -99,26 +104,6 @@ Presenting numerical analyses of data, detailed images are stored in the [Tablea
  
 <!-- DMI NOT PROOFED -->
 ## Data Model Implementation
-When we are training and testing the model we had to separate the data into two models and data sets.
-
-So that we were not cheating the models as if we tested the whole model and dataset we’ve would seen what we want from the training model and we would 
-be testing the same in the test set model in the final optimised model.
-
-So by splitting the datasets and looping through the numbers on the labels we would be training on one set of data and then test on the next set of data 
-after making our predictions.
-We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
-
-The cleaned, normalized, and standardized data was achieved as part of our pre-processing work at the begining of the project and prior to modeling. 
-This is evidenced under the `resources` files starting with `Star9999_raw` then further formating within the `Clean_stars.csv` and lastly leading to our 
-final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
-
-The Model utilizes data retrieved from SQL which is visable iwithin out Jupeter Notebook script.
-
-The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 75.10% classification accuracy. It becasue of the 
-for loop in the pre processing that cleaned the target class to give us a higher classification accuracy.
-
-<!-- DMO NOT PROOFED -->
-## Data Model Optimization
 
 ### **RFC Data Journey**
 
