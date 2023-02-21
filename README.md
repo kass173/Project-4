@@ -42,7 +42,7 @@ The aim of this study is to utilise the Morgan-Keenan (MK) classification system
 ## ETL - Extract, Transform and Load Process
 
 Considering the complexity of different databases, and in order to bring only the relevant data to be analysed, this project implements an **ETL 
-process**, which was implemented using Jypyter notepad and **Pandas DataFrame**. 
+process**, which was implemented using Jypyter notebook, SQLAlchemy and **Pandas DataFrame**. 
  
 ## Extract
 
@@ -50,10 +50,10 @@ Firstly, this process extracts the data from the CSV files using Pandas DataFram
 
 ## Transformation
 
-In the Transformation Phase, columns were added to the DataFrame creating additional columb:
+In the Transformation Phase, columns were added to the DataFrame creating additional column:
 
- * `A Mag`: this was needed to classify the stars but to get this figure we needed to calculate it by running the calculation from the dataset **Vmag x Plx** absolute magnitude to help us seperate sellar classes by grouping based on this variable.  
- * `class target`: This was a conversion from Spectral Type, so a for loop to categorise the stars based on some defined critiria which we have shown in the spectral star type visual.  
+ * `A Mag`: this was needed to classify the stars but to get this figure we needed to calculate it by running the calculation from the dataset **Vmag x Plx** absolute magnitude to help us seperate stellar classes by grouping based on this variable.  
+ * `class target`: This was a conversion from Spectral Type, so a for loop was used to categorise the stars based on some defined critiria which we have shown in the spectral star type visual.  
  * `star classification`: we created this column for our tableau visuals.  
 
 ## Load
@@ -66,9 +66,18 @@ Finally, and very importantly, a **Postgres Database** was created (`/Resources/
 
 ## Preprocessing
 
-During the preprocessing part of the project we took 2 our of our total 10 data sections and used this for the testing and training of the model ran 
-this within python.
+During the preprocessing part of the project we essentially cleaned our data by correcting the datatypes from 'object' to 'float'. After this we were able to remove any rows with Null values, this created a loss of 3.2% of the data, which is an acceptable loss.
 
+After this was completed we needed to calculate Absolute Magnitude using the below equation. 
+![AMAG](Images/equation.PNG)
+
+We were then able to create our 'TargetClass' Column, which utlised a for loop to separate the Spectral Types from 'O' to 'M' into their respective classes.
+
+Finally, we dropped the 'SpType' Column to allow for a completely numerical and scalable dataframe. 
+
+This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed dataset from which we worked. 
+
+## Data Model Implementation
 When we are training and testing the model we had to separate the data into two models and data sets.
 
 So that we were not cheating the models as if we tested the whole model and dataset we’ve would seen what we want from the training model and we would 
@@ -76,16 +85,13 @@ be testing the same in the test set model in the final optimised model.
 
 So by splitting the datasets and looping through the numbers on the labels we would be training on one set of data and then test on the next set of data 
 after making our predictions.
-
-## Data Model Implementation
-
 We have produced a Python script that initializes, trains, and evaluates a model based on our cleaned up dataset which is the `Final_Stars.csv`.
 
 The cleaned, normalized, and standardized data was achieved as part of our pre-processing work at the begining of the project and prior to modeling. 
 This is evidenced under the `resources` files starting with `Star9999_raw` then further formating within the `Clean_stars.csv` and lastly leading to our 
 final `Final_Stars.csv` which is our fully formatted and cleaned dataset file.
 
-The Model utilizes data retrieved from SQL which is visable iwithin out Jypeter Notebook script.
+The Model utilizes data retrieved from SQL which is visable iwithin out Jupeter Notebook script.
 
 The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 75.10% classification accuracy. It becasue of the 
 for loop in the pre processing that cleaned the target class to give us a higher classification accuracy.
