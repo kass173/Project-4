@@ -69,12 +69,12 @@ For our supervised learning models, we used two different datasets because we ha
 Presenting numerical analyses of data
 
 [Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
+![Final_stars_Dashboard](Images/Tableau/StellarDashboard.png)
 
 [Stars Tableau Dashboard 2](https://public.tableau.com/app/profile/grace.cheuk/viz/StellarClassification_16764912311040/Dashboard1?publish=yes) 
+![TG_stars_Dashboard](Images/Tableau/TG_stars_Dashboard.png)
 
-![Density for Amag & Vmag](Images/Tableau/TG_stars_Dashboard.png)
-
-![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
+<!-- ![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
  
 ![Density for Amag & Vmag](Images/Tableau/BV_plx.png)
 
@@ -82,7 +82,7 @@ Presenting numerical analyses of data
 
 ![Density for Amag & Vmag](Images/Tableau/mag_plx2.png)
 
-![Density for Amag & Vmag](Images/Tableau/vmag.png)
+![Density for Amag & Vmag](Images/Tableau/vmag.png) -->
 
 <!-- PROOFING STOP HERE, await Helen and Cheila update before continuing -->
 
