@@ -122,13 +122,32 @@ for loop in the pre processing that cleaned the target class to give us a higher
 <!-- DMO NOT PROOFED -->
 ## Data Model Optimization
 
-Then we ran the model optimization and evaluation process by making iterative changes to the model and the resulting changes in model performance is 
-documented at slightly higher to 75.6% this is within the Python script itself.
+### **RFC Data Journey
 
-Overall model performance is printed or displayed at the end of the script as mentioned is at 75.6% post the model optimisation process.
+Random Forest Classifier was used due to its strong ability towards dealing with multiple classifications, but also used MLP and SVM and LR during tests.
+The target columns were created within the Preprocessing section of the work, the ‘TargetClass’ breakdown is as follows. 
+•	“O” = Target Class 0
+•	“B” = Target Class 1
+•	“A” = Target Class 2
+•	“F” = Target Class 3
+•	“G” = Target Class 4
+•	“K” = Target Class 5 
+•	“M” = Target Class 6 
+•	Other = Target Class 7 (very small subgroups of stars that are uncommonly found) 
 
-Within the two-target folder is our final optimised model and analysis which contains an accuracy of 89.2%. 
+I used some feature engineering on this dataframe to increase the datapoints the models could pull information from. 
 
+The first model was MLP and GridSearchCV which gave us [73% accuracy](Resources/Spectral_Type_Classification/MLP.ipynb)
+
+The second model performed was using RFC and LR, with some randomly assigned hyperparameters this was [76% accuracy](Resources/Spectral_Type_Classification/FinalRFC+LR=76%.ipynb)
+
+The third model performed was using SVM which gave [77% accuracy](Resources/Spectral_Type_Classification/SVM-Test.ipynb)
+
+The fourth model performed was RFC again after running a GridSearchCV to find the best hyperparameters, this was [78% accuracy](Resources/Spectral_Type_Classification/Final_RFC_Model-78%.ipynb)
+
+The final model was done using RFC, GridSearchCV and resampling to achieve [91% accuracy and high F1 scores across the board](Resources/Spectral_Type_Classification/Final_RFC_Model-Upsampled-91%.ipynb) 
+
+For full details of this journey, please click here. <!--need to write script and link here--!>
 <!-- PY VIZ NOT PROOFED -->
 #### Matplotlib and Seaborn Visualisations
 Presenting density related data of the stellar bodies.
