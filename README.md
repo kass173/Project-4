@@ -15,15 +15,6 @@ After forming our group and gathering together, we searched for various datasets
 
 The aim of this study is to utilise the Morgan-Keenan (MK) classification system, which incorporates the HR classification system, to categorise stars by their chromaticity and size using spectral data. The study will focus on categorising stars into the main Spectral Types using the Absolute Magnitude and B-V Color Index within a specific dataset.
 
-#### Spectral Star Type
-
-![Spectral Definitions](Images/Spectral_Star_types.jpeg)
-
-#### Spectral Class
-
-![HRD](Images/HRDiagram.png)
-
-
 ## Extract, Transform & Load (ETL) Process
 
 To ensure that only relevant data is analysed, we implemented an ETL process for this project. This process was implemented using `Jupyter Notebook`, `SQLAlchemy`, and `Pandas DataFrame` to help with the extraction, transformation, and loading of data. With this process, we can quickly and easily access the necessary data without the added complexity of different databases.
@@ -35,6 +26,9 @@ During the transformation phase, we added columns to the DataFrame, creating add
 * `Amag`: This column was needed to classify the stars. To calculate this figure, we used the formula from the dataset (`Vmag` x `Plx`) to derive the absolute magnitude, which was then used to group the stars by their respective classes.
 * `Target class`: This column was a conversion from Spectral Type. We used a for loop to categorise the stars based on some defined criteria, which we have shown in the spectral star type visual.
 * `Star classification`: We created this column to aid in our Tableau visualisations.
+
+#### Spectral Class
+![HRD](Images/HRDiagram.png)
 
 <!-- double check these links to files used and created in this paragraph -->
 The final phase of the ETL process involved saving the data in a proper database so that it could be easily loaded by another application for further analysis. We completed this step using the Jupyter Notebook [Connect_to_Database.ipynb](Resources/Spectral_Type_Classification/Connect_to_Database.ipynb).
@@ -61,6 +55,9 @@ The libraries we used include:
 
 <!-- PREPROCESSING NOT PROOFED -->
 ## Pre-Processing
+
+#### Spectral Star Type
+![Spectral Definitions](Images/Spectral_Star_types.jpeg)
 
 For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
 
