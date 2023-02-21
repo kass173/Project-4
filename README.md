@@ -42,7 +42,7 @@ The ETL process resulted in the creation of CSV files with clean data, which are
 Finally, we created a `Postgres` database [Connect_to_Database.ipynb](/Resources/Connect_to_Database.ipynb) and loaded the consolidated data into the table, including [TG_stars_database.csv](Resources/TG_stars_database.csv) and [TG_stars.csv](Resources/TG_stars.csv) creating the [schema](Diagrams/tgstars_SQL_script.sql).
 
 <!-- rename this header  -->
-## Next Steps 
+## Next Steps
 
 We decided to use supervised machine learning due to the classification requirements our models would need to meet. Two models were built based on different information within the original dataset: a Random Forest Classifier and a Support Vector Machine.
 The libraries we used include:
@@ -64,6 +64,25 @@ For Tableau visualisations, we used two slightly different datasets to allow for
 2. one without, and the other was more for numerical analysis [final_stars](Resources/final_stars.csv)
 
 For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
+
+#### Tableau Visuals
+Presenting numerical analyses of data
+
+[Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
+
+[Stars Tableau Dashboard 2](https://public.tableau.com/app/profile/grace.cheuk/viz/StellarClassification_16764912311040/Dashboard1?publish=yes) 
+
+![Density for Amag & Vmag](Images/Tableau/TG_stars_Dashboard.png)
+
+![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
+ 
+![Density for Amag & Vmag](Images/Tableau/BV_plx.png)
+
+![Density for Amag & Vmag](Images/Tableau/mag_plx1.png)
+
+![Density for Amag & Vmag](Images/Tableau/mag_plx2.png)
+
+![Density for Amag & Vmag](Images/Tableau/vmag.png)
 
 <!-- PROOFING STOP HERE, await Helen and Cheila update before continuing -->
 
@@ -108,28 +127,7 @@ Overall model performance is printed or displayed at the end of the script as me
 
 Within the two-target folder is our final optimised model and analysis which contains an accuracy of 89.2%. 
 
-## Visualisations
-
-#### Tableau Visuals
-Presenting numerical analyses of data
-
-[Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
-
-[Stars Tableau Dashboard 2](https://public.tableau.com/app/profile/grace.cheuk/viz/StellarClassification_16764912311040/Dashboard1?publish=yes) 
-
-![Density for Amag & Vmag](Images/Tableau/TG_stars_Dashboard.png)
-
-![Density for Amag & Vmag](Images/Tableau/a_v_mag.png)
- 
-![Density for Amag & Vmag](Images/Tableau/BV_plx.png)
-
-![Density for Amag & Vmag](Images/Tableau/mag_plx1.png)
-
-![Density for Amag & Vmag](Images/Tableau/mag_plx2.png)
-
-![Density for Amag & Vmag](Images/Tableau/vmag.png)
-
-#### Matplotlib and Seaborn
+#### Matplotlib and Seaborn Visualisations
 Presenting density related data of the stellar bodies.
 
 ![B-V vs Amag](Images/BVvsAmag.jpeg)
