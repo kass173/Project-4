@@ -58,6 +58,21 @@ The libraries we used include:
 * Pandas
 * Warnings
 
+<!-- PREPROCESSING NOT PROOFED -->
+## Pre-Processing
+
+During the preprocessing part of the project we essentially cleaned our data by correcting the datatypes from 'object' to 'float'. After this we were able to remove any rows with Null values, this created a loss of 3.2% of the data, which is an acceptable loss.
+
+After this was completed we needed to calculate Absolute Magnitude using the below equation. 
+![AMAG](Images/equation.PNG)
+
+We were then able to create our 'TargetClass' Column, which utlised a for loop to separate the Spectral Types from 'O' to 'M' into their respective classes.
+
+Finally, we dropped the 'SpType' Column to allow for a completely numerical and scalable dataframe. 
+
+This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed dataset from which we worked.
+
+
 For Tableau visualisations, we used two slightly different datasets to allow for different visualisations:
 
 1. one with a target column name designed to tell more of a story [TG_stars](Resources/TG_stars_database.csv) 
@@ -65,7 +80,7 @@ For Tableau visualisations, we used two slightly different datasets to allow for
 
 For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
 
-#### Tableau Visuals
+### Tableau Visuals
 Presenting numerical analyses of data
 
 [Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
@@ -83,22 +98,8 @@ Presenting numerical analyses of data
 ![Density for Amag & Vmag](Images/Tableau/mag_plx2.png)
 
 ![Density for Amag & Vmag](Images/Tableau/vmag.png) -->
-
-<!-- PROOFING STOP HERE, await Helen and Cheila update before continuing -->
-
-## Preprocessing
-
-During the preprocessing part of the project we essentially cleaned our data by correcting the datatypes from 'object' to 'float'. After this we were able to remove any rows with Null values, this created a loss of 3.2% of the data, which is an acceptable loss.
-
-After this was completed we needed to calculate Absolute Magnitude using the below equation. 
-![AMAG](Images/equation.PNG)
-
-We were then able to create our 'TargetClass' Column, which utlised a for loop to separate the Spectral Types from 'O' to 'M' into their respective classes.
-
-Finally, we dropped the 'SpType' Column to allow for a completely numerical and scalable dataframe. 
-
-This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed dataset from which we worked. 
-
+ 
+<!-- DMI NOT PROOFED -->
 ## Data Model Implementation
 When we are training and testing the model we had to separate the data into two models and data sets.
 
@@ -118,6 +119,7 @@ The Model utilizes data retrieved from SQL which is visable iwithin out Jupeter 
 The model demonstrates meaningful predictive power of over the 75% threshold set within the rubric at 75.10% classification accuracy. It becasue of the 
 for loop in the pre processing that cleaned the target class to give us a higher classification accuracy.
 
+<!-- DMO NOT PROOFED -->
 ## Data Model Optimization
 
 Then we ran the model optimization and evaluation process by making iterative changes to the model and the resulting changes in model performance is 
@@ -127,6 +129,7 @@ Overall model performance is printed or displayed at the end of the script as me
 
 Within the two-target folder is our final optimised model and analysis which contains an accuracy of 89.2%. 
 
+<!-- PY VIZ NOT PROOFED -->
 #### Matplotlib and Seaborn Visualisations
 Presenting density related data of the stellar bodies.
 
@@ -142,6 +145,7 @@ Presenting density related data of the stellar bodies.
 
 ![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
 
+- - -
 
 Team - Group 2 (5)
 
