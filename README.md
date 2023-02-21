@@ -27,9 +27,11 @@ The aim of this study is to utilise the Morgan-Keenan (MK) classification system
 ## Dataset
 
 [Kaggle Dataset - Star Dataset for Stellar Classification](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs)  
-[Stars Data - Raw](Resources/Star9999_raw.csv)   
-[Stars Data - Clean](Resources/clean_stars.csv)  
-[Stars Data - Final](Resources/final_stars.csv)
+[Star Data - Raw Small](Resources/Star9999_raw.csv) and [Star Data- Raw Large](Resources/Star99999_raw.csv)
+
+For Tableau we used two slightly different datasets, one with a target column name and one without, to allow for different visualisations, one that tells more of a story and one more for numerical analysis. They can be found [here](Resources/final_stars.csv) and [here](Resources/TG_stars_database.csv) 
+
+For our Supervised Learning Models we used two different datasets as we had two different classification models. One was based on a sample size of 10,000 and the other off a sample size of 100,000, both datasets were cleaned the same way but preprocessed slightly differently They can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv)
 
 ## Spectral Star Type
 
