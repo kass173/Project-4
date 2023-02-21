@@ -138,15 +138,11 @@ The target columns were created within the Preprocessing section of the work, th
 
 I used some feature engineering on this dataframe to increase the datapoints the models could pull information from. 
 
-The first model was MLP and GridSearchCV which gave us [73% accuracy](Resources/Spectral_Type_Classification/MLP.ipynb)
-
-The second model performed was using RFC and LR, with some randomly assigned hyperparameters this was [76% accuracy](Resources/Spectral_Type_Classification/FinalRFC+LR=76%.ipynb)
-
-The third model performed was using SVM which gave [77% accuracy](Resources/Spectral_Type_Classification/SVM-Test.ipynb)
-
-The fourth model performed was RFC again after running a GridSearchCV to find the best hyperparameters, this was [78% accuracy](Resources/Spectral_Type_Classification/Final_RFC_Model-78%.ipynb)
-
-The final model was done using RFC, GridSearchCV and resampling to achieve [91% accuracy and high F1 scores across the board](Resources/Spectral_Type_Classification/Final_RFC_Model-Upsampled-91%.ipynb) 
+1. The first model was MLP and GridSearchCV which gave us [73% accuracy](Resources/Spectral_Type_Classification/MLP.ipynb)
+2. The second model performed was using RFC and LR, with some randomly assigned hyperparameters this was [76% accuracy](Resources/Spectral_Type_Classification/FinalRFC+LR=76%.ipynb)
+3. The third model performed was using SVM which gave [77% accuracy](Resources/Spectral_Type_Classification/SVM-Test.ipynb)
+4. The fourth model performed was RFC again after running a GridSearchCV to find the best hyperparameters, this was [78% accuracy](Resources/Spectral_Type_Classification/Final_RFC_Model-78%.ipynb)
+5. The final model was done using RFC, GridSearchCV and resampling to achieve [91% accuracy and high F1 scores across the board](Resources/Spectral_Type_Classification/Final_RFC_Model-Upsampled-91%.ipynb) 
 
 For full details of this journey, please click here. <!--need to write script and link here--!>
 <!-- PY VIZ NOT PROOFED -->
