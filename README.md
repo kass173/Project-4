@@ -1,80 +1,70 @@
-# Project-4
+# Project 4: Mission Meteor
 
-## Team: Cheila, Grace, Helen, Jacob, Kassem & Rami
+DAV Module 23 - Project 4 Group Challenge: Demystifying Machine Learning
 
 ![stars](Images/milkyway.jpeg)
 
-## Project Title: STARS ANALYSIS
+## Introduction
 
-For our 4th project we’ve decided to create a Machine Learning Model that can help classify stars into their respective categories. 
+Welcome to our project focused on the classification of stars through the use of machine learning. In this project, we look to develop models that can accurately categorise stars into their respective classes, using a variety of data analysis techniques and tools. We will also use Tableau to create visual analyses of our datasets.
 
-Firstly, after deciding the members of our group and getting together we looked at  various data sets across various topic categories mainly used Kaggle & google searches to find our dataset.
+After forming our group and gathering together, we searched for various datasets across different categories, mainly using Kaggle and Google searches to find our dataset. We came to a general consensus on analysing the [Kaggle Dataset - Star Dataset for Stellar Classification](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs):
 
-We came to a general group consensus on our final dataset related to “star dataset for stellar classification”. 
+* [Star Data - Raw Small](Resources/Star9999_raw.csv)
+* [Star Data- Raw Large](Resources/Star99999_raw.csv)
 
-So this will be the problem/topic we wanted to analyse and visualise.
+The aim of this study is to utilise the Morgan-Keenan (MK) classification system, which incorporates the HR classification system, to categorise stars by their chromaticity and size using spectral data. The study will focus on categorising stars into the main Spectral Types using the Absolute Magnitude and B-V Color Index within a specific dataset.
 
-We were either going to choose supervised or unsupervised machine learning and but we deciced ultimately on a supervised machine learning route due to the classification requirements our models would need to meet. Two models were built based off of different information within the original dataset, one is Random Forest Classifier and the other is Support Vector Machine.
+#### Spectral Star Type
 
-### Libraries used: 
+![Spectral Definitions](Images/Spectral_Star_types.jpeg)
+
+#### Spectral Class
+
+![HRD](Images/HRDiagram.png)
+
+
+## Extract, Transform & Load (ETL) Process
+
+To ensure that only relevant data is analysed, we implemented an ETL process for this project. This process was implemented using `Jupyter Notebook`, `SQLAlchemy`, and `Pandas DataFrame` to help with the extraction, transformation, and loading of data. With this process, we can quickly and easily access the necessary data without the added complexity of different databases.
+
+To begin the ETL process, we extracted data from the CSV files using Pandas DataFrame. During the extraction phase, we removed unwanted columns to ensure that only relevant data was processed.
+
+During the transformation phase, we added columns to the DataFrame, creating additional variables to aid in our analysis. These included:
+
+* `Amag`: This column was needed to classify the stars. To calculate this figure, we used the formula from the dataset (`Vmag` x `Plx`) to derive the absolute magnitude, which was then used to group the stars by their respective classes.
+* `Target class`: This column was a conversion from Spectral Type. We used a for loop to categorise the stars based on some defined criteria, which we have shown in the spectral star type visual.
+* `Star classification`: We created this column to aid in our Tableau visualisations.
+
+<!-- double check these links to files used and created in this paragraph -->
+The final phase of the ETL process involved saving the data in a proper database so that it could be easily loaded by another application for further analysis. We completed this step using the Jupyter Notebook [Connect_to_Database.ipynb](Resources/Spectral_Type_Classification/Connect_to_Database.ipynb).
+The ETL process resulted in the creation of CSV files with clean data, which are available in the[Resources](/Resources) folder of this repository.
+Finally, we created a `Postgres` database [Connect_to_Database.ipynb](/Resources/Connect_to_Database.ipynb) and loaded the consolidated data into the table, including [TG_stars_database.csv](Resources/TG_stars_database.csv) and [TG_stars.csv](Resources/TG_stars.csv) creating the [schema](Diagrams/tgstars_SQL_script.sql).
+
+## Next Steps <!-- rename this header  -->
+
+We decided to use supervised machine learning due to the classification requirements our models would need to meet. Two models were built based on different information within the original dataset: a Random Forest Classifier and a Support Vector Machine.
+The libraries we used include:
+
 * SkLearn
 * ImbLearn
 * MatPlotLib
 * Seaborn
 * Plotly
 * Collections
-* SqlAlchemy 
-* NumPy 
-* Pandas 
-* Warnings 
+* SqlAlchemy
+* NumPy
+* Pandas
+* Warnings
 
-We also included two Tableau dashboards to analyse our datasets. 
+For Tableau visualisations, we used two slightly different datasets to allow for different visualisations:
 
-## Aim
+1. one with a target column name designed to tell more of a story [TG_stars](Resources/TG_stars_database.csv) 
+2. one without, and the other was more for numerical analysis [final_stars](Resources/final_stars.csv)
 
-The aim of this study is to utilise the Morgan-Keenan (MK) classification system, which incorporates the HR classification system, to categorise stars by their chromaticity and size using spectral data. The study will focus on categorising stars into the main Spectral Types using the Absolute Magnitude and B-V Color Index within a specific dataset.
+For our supervised learning models, we used two different datasets because we had two different classification models. One was based on a sample size of 10,000, and the other was based on a sample size of 100,000. Both datasets were cleaned the same way but preprocessed slightly differently. The datasets can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv).
 
-## Dataset
-
-[Kaggle Dataset - Star Dataset for Stellar Classification](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs)  
-[Star Data - Raw Small](Resources/Star9999_raw.csv) and [Star Data- Raw Large](Resources/Star99999_raw.csv)
-
-For Tableau we used two slightly different datasets, one with a target column name and one without, to allow for different visualisations, one that tells more of a story and one more for numerical analysis. They can be found [here](Resources/final_stars.csv) and [here](Resources/TG_stars_database.csv) 
-
-For our Supervised Learning Models we used two different datasets as we had two different classification models. One was based on a sample size of 10,000 and the other off a sample size of 100,000, both datasets were cleaned the same way but preprocessed slightly differently They can be found [here](Resources/TG_stars.csv) and [here](Resources/PreProcess_2Targets_beforeDownSample.csv)
-
-## Spectral Star Type
-
-![Spectral Definitions](Images/Spectral_Star_types.jpeg)
-
-## Spectral Class
-
-![HRD](Images/HRDiagram.png)
-
-## ETL - Extract, Transform and Load Process
-
-Considering the complexity of different databases, and in order to bring only the relevant data to be analysed, this project implements an **ETL 
-process**, which was implemented using Jypyter notebook, SQLAlchemy and **Pandas DataFrame**. 
- 
-## Extract
-
-Firstly, this process extracts the data from the CSV files using Pandas DataFrame. In the extraction phase, the unwanted columns were removed.
-
-## Transformation
-
-In the Transformation Phase, columns were added to the DataFrame creating additional column:
-
- * `A Mag`: this was needed to classify the stars but to get this figure we needed to calculate it by running the calculation from the dataset **Vmag x Plx** absolute magnitude to help us seperate stellar classes by grouping based on this variable.  
- * `class target`: This was a conversion from Spectral Type, so a for loop was used to categorise the stars based on some defined critiria which we have shown in the spectral star type visual.  
- * `star classification`: we created this column for our tableau visuals.  
-
-## Load
-
-The last phase of the ETL process to save the data in a proper database, so it can be easily loaded by another application to proceed with further analysis on the data. We did this in the Jypeter Notebook `Connect_to_Database.ipynb`.
-
-This process has prepared CSV files with clean data, which are available in the `/Resources` folder of this repository.
-
-Finally, and very importantly, a **Postgres Database** was created (`/Resources/Connect_to_Database.ipynb`), and the consolidated data loaded into the table. `TG_stars_database.csv` & `TG_stars.csv`.
+<!-- PROOFING STOP HERE, await Helen and Cheila update before continuing -->
 
 ## Preprocessing
 
@@ -117,23 +107,10 @@ Overall model performance is printed or displayed at the end of the script as me
 
 Within the two-target folder is our final optimised model and analysis which contains an accuracy of 89.2%. 
 
-##  Tableau & Visualisations
+## Visualisations
 
-For our visualisations we used **Matplotlib and Seaborn** this is because our data was to present density related data of the stellar bodies.
-
-![B-V vs Amag](Images/BVvsAmag.jpeg)
-
-![B-V vs Vmag](Images/BVvsVmag.jpeg)
-
-![HR Diagram](Images/HRDiagram.jpeg)
-
-![Plx vs Amag](Images/PlxVSAmag.PNG)
-
-![Plx vs Vmag](Images/PlxVSVmag.PNG)
-
-![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
-
-### Tableau Visuals
+#### Tableau Visuals
+Presenting numerical analyses of data
 
 [Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
 
@@ -151,4 +128,26 @@ For our visualisations we used **Matplotlib and Seaborn** this is because our da
 
 ![Density for Amag & Vmag](Images/Tableau/vmag.png)
 
+#### Matplotlib and Seaborn
+Presenting density related data of the stellar bodies.
 
+![B-V vs Amag](Images/BVvsAmag.jpeg)
+
+![B-V vs Vmag](Images/BVvsVmag.jpeg)
+
+![HR Diagram](Images/HRDiagram.jpeg)
+
+![Plx vs Amag](Images/PlxVSAmag.PNG)
+
+![Plx vs Vmag](Images/PlxVSVmag.PNG)
+
+![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
+
+
+Team - Group 2 (5)
+
+Cheila Bergamini (cheibergam)
+Grace Cheuk (gw-sc)
+Helen Vlachou (EleniQ)
+Kassem Saleem (kass173)
+Rahmi Rahmiev ()
