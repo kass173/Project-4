@@ -80,7 +80,7 @@ We used two slightly different datasets to allow for different visualisations:
 1. one with a target column name designed to tell more of a story [TG_stars](Resources/TG_stars_database.csv) 
 2. one without, and the other was more for numerical analysis [final_stars](Resources/final_stars.csv)
 
-Presenting numerical analyses of data, detailed images are stored in the [Tableau](Resources/Tableau) folder.
+Presenting numerical analyses of data, detailed images are stored in the [Tableau](Images/Tableau) folder.
 
 [Stars Tableau Dashboard 1](https://public.tableau.com/app/profile/rahmi.rahmiev/viz/StellarDashboard/Dashboard1)  
 ![Final_stars_Dashboard](Images/Tableau/StellarDashboard.png)
