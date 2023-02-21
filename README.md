@@ -144,6 +144,50 @@ Presenting density related data of the stellar bodies.
 
 ![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
 
+
+### SVM Linear and Non-Linear classification (Giants and  Dwarfs)
+
+**Linear** and  **Non-linear** in SVM refer  to  the  types  of  decision  boundaries  that  can  be  created  by  the  algorithm,  depending  on  whether  the  classes are linearly  separable  or  not  in the  input feature  space.
+
+#### Pre-Processing
+
+The pre-processing  steps for this particular scenario  was  followed  the  same  steps as the  initial  one, with na additional  step in order  to  get  the target class  breakdown in 2 different classes.
+
+The target column  has  been  revised  to  bring  the  information  of  the Star based  on  the  following target class  breakdown:
+* Giants (1): I, II, III, VII
+* Dwarfs (0): IV, V, VI
+* Others (9): Others
+	* while  Others (9) were dropped to consider 2 classes as target.
+
+As a result  of  this  pre-processing  phase, **2489** Giants and **2157** Dwarfs  were identified in the database.
+
+Finally, in order to balance the dataset, a resampling  technique  was  used (``downsampled``), resulting in two database files to be used in further tranining and analysis phases:
+* **Database 9999**
+	* without  the “resampling”, considering a total of **4646** stars (**2489** Giants and **2157** Dwarfs).
+	* after  the “resampling”, considering a total of **4314** stars (**2157** Giants and **2157** Dwarfs).    
+
+* **Database 99999**
+	* without  the “resampling”, considering a total **47497** of stars (**26622** Giants and **20875** Dwarfs).
+	* after  the “resampling”, considering a total of **4314** stars (**20875** Giants and **20875** Dwarfs). Both files were  used for training.
+    
+#### SVM – Support Vector Machine
+
+SVM was used due to it is a powerful tool for star classification, and it has been used successfully in many studies. The decision boundary of  an SVM can be linear or non-linear (such as the Radial Basis Function kernel, or simply RBF).
+
+For the SVM classification, the dataset was split into two sets: Training  and Testing.
+
+The Support Vector Machine classifer was set up accordingly for the  following scenarios:
+* **Linear classifier:** linear kernel, and ``random_state=42``.
+* **Non-Linear classifier:** RBF kernel, and the additional parameters ``C=1`` and ``gamma = 1.0``.
+
+The SVM model for each scenario was trained and analysed in separate run. The following results and outcome for these analysis can be listed.
+
+| |Test Accuracy - Database 9999 | |Test Accuracy - Database 99999 | |
+|:----|:----|:----|:----|:----|
+|  |RBF Kernel |Linear Kernel |RBF Kernel |Linear Kernel |
+|**Before Balancing**|0.851|0.840|0.830|0.817|
+|**After Balancing**|0.851|0.840|0.830|0.819|
+
 - - -
 
 Team - Group 2 (5)
