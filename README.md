@@ -77,6 +77,26 @@ This preprocessed CSV has been saved as TG_stars. This is the fully preprocessed
 <!-- Cheila's used this for dwarf/giants -->
 ![HRD](Images/HRDiagram.png)
 
+#### Spectral Type Preprocessing (AMAG)
+
+The pre-processing  steps for this particular scenario  was  followed  the  same  steps as the  initial  one, with na additional  step in order  to  get  the target class  breakdown in 2 different classes.
+
+The target column  has  been  revised  to  bring  the  information  of  the Star based  on  the  following target class  breakdown:
+* Giants (1): I, II, III, VII
+* Dwarfs (0): IV, V, VI
+* Others (9): Others
+	* while  Others (9) were dropped to consider 2 classes as target.
+
+As a result  of  this  pre-processing  phase, **2489** Giants and **2157** Dwarfs  were identified in the database.
+
+Finally, in order to balance the dataset, a resampling  technique  was  used (``downsampled``), resulting in two database files to be used in further tranining and analysis phases:
+* **Database 9999**
+	* without  the “resampling”, considering a total of **4646** stars (**2489** Giants and **2157** Dwarfs).
+	* after  the “resampling”, considering a total of **4314** stars (**2157** Giants and **2157** Dwarfs).    
+
+* **Database 99999**
+	* without  the “resampling”, considering a total **47497** of stars (**26622** Giants and **20875** Dwarfs).
+	* after  the “resampling”, considering a total of **4314** stars (**20875** Giants and **20875** Dwarfs). Both files were  used for training.
 
 ### Tableau Visualisations
 We used two slightly different datasets to allow for different visualisations:
@@ -127,48 +147,10 @@ I used some feature engineering on this dataframe to increase the datapoints the
 4. The fourth model performed was RFC again after running a GridSearchCV to find the best hyperparameters, this was [78% accuracy](Resources/Spectral_Type_Classification/Final_RFC_Model-78%.ipynb)
 5. The final model was done using RFC, GridSearchCV and resampling to achieve [91% accuracy and high F1 scores across the board](Resources/Spectral_Type_Classification/Final_RFC_Model-Upsampled-91%.ipynb) 
 
-For full details of this journey, please click here. <!--need to write script and link here--!>
-<!-- PY VIZ NOT PROOFED -->
-#### Matplotlib and Seaborn Visualisations
-Presenting density related data of the stellar bodies.
-
-![B-V vs Amag](Images/BVvsAmag.jpeg)
-
-![B-V vs Vmag](Images/BVvsVmag.jpeg)
-
-![HR Diagram](Images/HRDiagram.jpeg)
-
-![Plx vs Amag](Images/PlxVSAmag.PNG)
-
-![Plx vs Vmag](Images/PlxVSVmag.PNG)
-
-![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
-
-
 ### SVM Linear and Non-Linear classification (Giants and  Dwarfs)
 
 **Linear** and  **Non-linear** in SVM refer  to  the  types  of  decision  boundaries  that  can  be  created  by  the  algorithm,  depending  on  whether  the  classes are linearly  separable  or  not  in the  input feature  space.
 
-#### Pre-Processing
-
-The pre-processing  steps for this particular scenario  was  followed  the  same  steps as the  initial  one, with na additional  step in order  to  get  the target class  breakdown in 2 different classes.
-
-The target column  has  been  revised  to  bring  the  information  of  the Star based  on  the  following target class  breakdown:
-* Giants (1): I, II, III, VII
-* Dwarfs (0): IV, V, VI
-* Others (9): Others
-	* while  Others (9) were dropped to consider 2 classes as target.
-
-As a result  of  this  pre-processing  phase, **2489** Giants and **2157** Dwarfs  were identified in the database.
-
-Finally, in order to balance the dataset, a resampling  technique  was  used (``downsampled``), resulting in two database files to be used in further tranining and analysis phases:
-* **Database 9999**
-	* without  the “resampling”, considering a total of **4646** stars (**2489** Giants and **2157** Dwarfs).
-	* after  the “resampling”, considering a total of **4314** stars (**2157** Giants and **2157** Dwarfs).    
-
-* **Database 99999**
-	* without  the “resampling”, considering a total **47497** of stars (**26622** Giants and **20875** Dwarfs).
-	* after  the “resampling”, considering a total of **4314** stars (**20875** Giants and **20875** Dwarfs). Both files were  used for training.
     
 #### SVM – Support Vector Machine
 
@@ -188,6 +170,22 @@ The SVM model for each scenario was trained and analysed in separate run. The fo
 |**Before Balancing**|0.851|0.840|0.830|0.817|
 |**After Balancing**|0.851|0.840|0.830|0.819|
 
+### Matplotlib and Seaborn Visualisations
+Presenting density related data of the stellar bodies.
+
+![B-V vs Amag](Images/BVvsAmag.jpeg)
+
+![B-V vs Vmag](Images/BVvsVmag.jpeg)
+
+![HR Diagram](Images/HRDiagram.jpeg)
+
+![Plx vs Amag](Images/PlxVSAmag.PNG)
+
+![Plx vs Vmag](Images/PlxVSVmag.PNG)
+
+![Density for Amag & Vmag](Images/density_for_Amag_and_Vmag.PNG)
+
+
 - - -
 
 Team - Group 2 (5)
@@ -196,4 +194,4 @@ Team - Group 2 (5)
 * Grace Cheuk (gw-sc)
 * Helen Vlachou (EleniQ)
 * Kassem Saleem (kass173)
-* Rahmi Rahmiev ()
+* Rahmi Rahmiev (RRahmiev)
